@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Comfortaa:wght@300;400;500;600;700&family=Monoton&family=Ubuntu:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+body {
+  background-color: rgb(71, 71, 71);
+  line-height: 1;
+  font-family: Ubuntu, sans-serif;
+  color: black;
+  background-color: rgb(217, 226, 230);
+}
+
+.header {
+  border-bottom: 3px solid #ffac85;
+  background-color: #ff8629;
+  height: 50px;
+  width: 100%;
+
+  img {
+    width: 44px;
+    height: 44px;
+    border-radius: 7px;
+  }
+
+  nav {
+    display: flex;
+    align-items: center;
+    height: 100%;
+    max-width: 922px;
+    margin: auto;
+  }
+}
+
+.content {
+  display: flex;
+  max-width: 922px;
+  margin: auto;
+}
+
+.sidebar {
+  user-select: none;
+  width: 266px;
+  height: 100vh;
+  padding-top: 74px;
+  background-color: rgb(0, 0, 0);
+  color: #ff8629;
+  border-right: 1px solid black;
+
+  div {
+    margin-bottom: 10px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    padding: 15px;
+    font-weight: 700;
+
+    &.active {
+      background-color: #fff;
+      color: rgb(0, 0, 0);
+    }
+
+    .icon {
+      margin-right: 10px;
+      font-size: 1.2rem;
+    }
+  }
+}
+
+.task {
+  height: 100vh;
+  background-color: #fff;
+  width: calc(922px - 266px);
+  padding: 74px 20px 0;
+
+  h1 {
+    font-size: 1.5rem;
+    font-weight: 500;
+  }
+
+  .add-task-btn {
+    cursor: pointer;
+    .plus {
+      color: #ff8629;
+      font-size: 1.3rem;
+      margin-right: 15px;
+    }
+    .add-task-text {
+      font-size: 1rem;
+      font-weight: 400;
+    }
+  }
+
+  .add-task-dialog {
+    input {
+      width: 100%;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: 1px solid #ddd;
+      background-color: #fff;
+      border-radius: 3px;
+      height: 35px;
+      margin-top: 5px;
+    }
+    .add-task-actions-container {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 10px;
+      .add-btn {
+        background-color: #ff8629;
+        color: #fff;
+        border: 1px solid transparent;
+        margin-right: 5px;
+        font-weight: bold;
+        font-size: 13px;
+        padding: 6px 12px 7px 12px;
+        border-radius: 3px !important;
+        &:disabled {
+          background-color: gray;
+        }
+      }
+      .cancel-btn {
+        all: unset;
+        color: #555;
+        cursor: pointer;
+        font-size: 14px;
+        margin: 0 5px;
+        font-weight: 700;
+      }
+    }
+  }
+  .task-item-container {
+    margin-top: 40px;
+    padding: 0 20px;
+  }
+
+  .task-item {
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #ff8629;
+  }
+}
